@@ -1,0 +1,47 @@
+/* Navbar.css */
+.navbar {
+    padding: 10px 20px;
+    position: fixed; /* Fixes the navbar to the top */
+    width: 100%;
+    z-index: 1000; /* Ensures it stays above other content */
+    margin-bottom: 0px;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-item {
+    margin-right: 20px; /* Spacing between items */
+}
+
+.navbar-link {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navbar-link:hover {
+    color: #007BFF; /* Change color on hover */
+}
+
+.active {
+    font-weight: bold; /* Style for active link */
+    border-bottom: 2px solid #007BFF; /* Underline for active link */
+}
