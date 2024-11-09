@@ -1,12 +1,11 @@
-// Contact.jsx
 import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 import emailjs from 'emailjs-com';
 import { Snackbar, Alert } from '@mui/material';
+import { motion } from 'framer-motion'; // Import framer-motion for animation
 import './Sections.css';
 
-
-const Container = styled.div`
+const Container = styled(motion.div)` // Change to motion.div
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,7 +17,7 @@ const Container = styled.div`
   }
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)` // Change to motion.div
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -38,7 +37,7 @@ const Title = styled.h2`
   text-align: center;
   font-weight: 600;
   margin-top: 0px;
-  color: #ffffff; /* White text */
+  color: #ffffff;
   @media (max-width: 768px) {
     margin-top: 0px;
     font-size: 32px;
@@ -49,14 +48,14 @@ const Desc = styled.p`
   font-size: 18px;
   text-align: center;
   max-width: 600px;
-  color: #ffffff; /* White text */
+  color: #ffffff;
   @media (max-width: 768px) {
     margin-top: 0px;
     font-size: 16px;
   }
 `;
 
-const ContactForm = styled.form`
+const ContactForm = styled(motion.form)` // Change to motion.form
   width: 95%;
   max-width: 600px;
   display: flex;
@@ -73,22 +72,22 @@ const ContactTitle = styled.h3`
   font-size: 24px;
   margin-bottom: 6px;
   font-weight: 600;
-  color: #ffffff; /* White text */
+  color: #ffffff;
 `;
 
 const ContactLabel = styled.label`
   font-size: 16px;
-  color: #ffffff; /* White text */
+  color: #ffffff;
   margin-bottom: 4px;
 `;
 
 const ContactInput = styled.input`
   flex: 1;
-  background-color: #f0f0f0; /* Light white background */
-  border: 1px solid #ccc; /* Light gray border */
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
   outline: none;
   font-size: 18px;
-  color: black; /* White text */
+  color: black;
   border-radius: 12px;
   padding: 12px 16px;
   &:focus {
@@ -98,11 +97,11 @@ const ContactInput = styled.input`
 
 const ContactInputMessage = styled.textarea`
   flex: 1;
-  background-color: #f0f0f0; /* Light white background */
-  border: 1px solid #ccc; /* Light gray border */
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
   outline: none;
   font-size: 18px;
-  color: black; /* White text */
+  color: black;
   border-radius: 12px;
   padding: 12px 16px;
   resize: vertical;
@@ -159,12 +158,35 @@ const Contact = () => {
       );
   };
 
+  // Animation variants for each section
+  const formVariants = {
+    initial: { opacity: 0, y: 50 },  // Start from below and invisible
+    animate: { opacity: 1, y: 0, transition: { duration: 1 } },  // End in original position
+  };
+
+  const wrapperVariants = {
+    initial: { opacity: 0, x: -100 },  // Start from the left
+    animate: { opacity: 1, x: 0, transition: { duration: 1 } },  // End in original position
+  };
+
   return (
-    <Container>
+    <Container
+      initial="initial"
+      whileInView="animate"
+      variants={wrapperVariants}
+      viewport={{ once: false, amount: 0.2 }}
+    >
       <Wrapper>
         <h1 className='co'>Contact us</h1>
         <Desc>Feel free to reach out to us for any questions or opportunities!</Desc>
-        <ContactForm ref={form} onSubmit={handleSubmit}>
+        <ContactForm
+          ref={form}
+          onSubmit={handleSubmit}
+          initial="initial"
+          whileInView="animate"
+          variants={formVariants}
+          viewport={{ once: false, amount: 0.2 }}
+        >
           <ContactTitle>Email us 🚀</ContactTitle>
 
           <ContactLabel htmlFor="from_email">Your Email</ContactLabel>

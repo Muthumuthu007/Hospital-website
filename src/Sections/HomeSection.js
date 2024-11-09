@@ -3,6 +3,22 @@ import React from 'react';
 import './Sections.css'; // Ensure your CSS file is properly imported
 import logo from '../logo.png'; // Adjust path to import the logo
 import WhatsappIcon from '../WhatsappIcon.jpg'; 
+import {motion} from "framer-motion";
+const textVariants={
+  initial:{
+    x:-500,
+    opacity:0,
+  },
+  animate:{
+    x:0,
+    opacity:1,
+    transition:{
+      duration:1,
+      staggerChildren:0.1,
+    }
+  },
+
+}
 
 function HomeSection() {
   const handleButtonClick = () => {
@@ -10,15 +26,15 @@ function HomeSection() {
   };
   
   return (
-    <div className="home-section">
-      <img src={logo} alt='Logo' /> {/* Use the imported logo */}
-      <h1>Welcome to HR Transport</h1>
-      <p>Your trusted partner in logistics and transport.</p>
-      <button className="cta-button" onClick={handleButtonClick} aria-label="Get Started">
-        <img src={WhatsappIcon} alt="WhatsApp" className="whatsapp-icon" />
+    <motion.div className="home-section"variants={textVariants} initial="initial" animate="animate">
+      <motion.img src={logo} alt='Logo' variants={textVariants} /> {/* Use the imported logo */}
+      <motion.h1 variants={textVariants} >Welcome to HR Transport</motion.h1>
+      <motion.p variants={textVariants} >Your trusted partner in logistics and transport.</motion.p>
+      <motion.button variants={textVariants}  className="cta-button"  onClick={handleButtonClick} aria-label="Get Started">
+        <motion.img variants={textVariants} src={WhatsappIcon} alt="WhatsApp" className="whatsapp-icon" />
         Message us
-      </button>{/* Call to Action button */}
-    </div>
+      </motion.button>{/* Call to Action button */}
+    </motion.div>
   );
 }
 
