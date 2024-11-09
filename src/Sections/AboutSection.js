@@ -23,14 +23,7 @@ function AboutSection() {
       <br>
       </br>
       </div>
-      <div className='va'>
-      <p><strong>Proprietor:</strong> Selvarani R</p>
-      <br>
-      </br>
-      <p><b>GST Registration Number: </b>33MBEPS7815Q1ZO</p><br>
-      </br>
-      <p>Location: 10/11, Meenakchi Street, Laxmi Amman Nagar, Chennai, Tamil Nadu, 600118</p>
-      </div>
+     
     </section>
   );
 }

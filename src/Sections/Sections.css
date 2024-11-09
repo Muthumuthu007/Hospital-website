@@ -1,128 +1,164 @@
-/* src/Sections/Sections.css */
-
-
-.home-section{
+.home-section {
   margin-top: 0px;
   color: white;
   margin-bottom: 0px;
-  
 }
 
 .home-section h1 {
-  font-size: 3rem; /* Large heading size */
-  margin-bottom: 20px; /* Space below heading */
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
 .home-section p {
-  font-size: 1.5rem; /* Paragraph size */
-  margin-bottom: 30px; /* Space below paragraph */
-  
+  font-size: 1.5rem;
+  margin-bottom: 30px;
 }
 
 .cta-button {
-  display: flex; /* To align items horizontally */
-  align-items: center; /* Vertically center the icon and text */
+  display: flex;
+  align-items: center;
   padding: 15px 30px;
-  font-size: 1.2rem; /* Button size */
-  background-color: rgb(38, 210, 38); /* Button color */
-  color: white; /* Button text color */
-  border: none; /* Remove border */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Pointer on hover */
-  transition: background-color 0.3s; /* Smooth transition */
+  font-size: 1.2rem;
+  justify-content: center; /* Centers content horizontally */
+  background-color: rgb(38, 210, 38);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
   text-align: center;
-  margin-left: 600px;
+  margin-left: 500px;
 }
 
 .cta-button:hover {
-  background-color: rgb(25, 80, 25); /* Darker button color on hover */
+  background-color: rgb(25, 80, 25);
 }
+
 .whatsapp-icon {
-  width: 20px; /* Adjust the size of the icon */
+  width: 20px;
   height: 20px;
-  margin-right: 10px; /* Space between icon and text */
+  margin-right: 10px;
+
+
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-  .cta-button {
-    width: 100%; /* Full-width button on mobile */
-    justify-content: center; /* Center the text and icon on mobile */
-  }
-}
-.about-section{
-color: white;
-}
-.service-section{
-  margin-top: 0px;
-color: white;
-margin-bottom: 10px;
-}
-.contact{
+.about-section {
   color: white;
+}
 
+.service-section {
+  margin-top: 0px;
+  color: white;
+  margin-bottom: 10px;
 }
-.email{
- color:black;
+
+.contact {
+  color: white;
 }
-.ab,.sc,.co{
+
+.email {
+  color: black;
+}
+
+.ab, .sc, .co {
   color: yellow;
 }
+
 .container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px; /* Adjust spacing between boxes */
+  gap: 20px;
 }
 
 .one {
-  margin: 10px; 
+  margin: 10px;
   background-color: #030303;
   border: 2px solid black;
   padding: 20px;
   border-radius: 30px;
   display: inline-block;
   box-sizing: border-box;
-  height: 300px; /* Increased height to accommodate the image */
+  height: 300px;
   width: 250px;
   font-size: x-large;
   font-weight: bolder;
-  flex-basis: 30%; /* Each box will take about 30% of the row */
-  text-align: center; /* Center the content inside */
+  flex-basis: 30%;
+  text-align: center;
 }
 
 .one img {
-  max-width: 100%; /* Ensure the image fits within the box */
-  height: auto; /* Keep image aspect ratio */
-  border-radius: 10px; /* Optional: to give the image rounded corners */
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
-.about,.val,.va{
-  
-  margin: 10px; 
+
+.about, .val, .va {
+  margin: 10px;
   background-color: #4f4d4d;
   border: 2px solid black;
   padding: 20px;
   border-radius: 30px;
   display: inline-block;
   box-sizing: border-box;
-  height: 350px; /* Increased height to accommodate the image */
+  height: 350px;
   width: 700px;
   font-size: x-large;
   font-weight: bolder;
-  flex-basis: 30%; /* Each box will take about 30% of the row */
-  text-align: center; /* Center the content inside */
-
- 
-
-
-  
+  flex-basis: 30%;
+  text-align: center;
 }
-.about:hover{
+
+.about:hover {
   background-color: #282727;
 }
-.val:hover{
+
+.val:hover, .va:hover {
   background-color: #282727;
 }
-.va:hover{
-  background-color: #282727;
+
+/* Responsive styles for Sections.css */
+@media (max-width: 768px) {
+  .home-section h1 {
+    font-size: 2rem;
+  }
+
+  .home-section p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .about-section, .service-section, .contact {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .one, .about, .val, .va {
+    width: 90%;
+    height: auto;
+    margin: 10px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .one, .about, .val, .va {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 10px;
+  }
 }

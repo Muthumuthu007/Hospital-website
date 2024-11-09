@@ -1,47 +1,84 @@
-/* Navbar.css */
+/* Navbar container styles */
 .navbar {
-    padding: 10px 20px;
-    position: fixed; /* Fixes the navbar to the top */
-    width: 100%;
-    z-index: 1000; /* Ensures it stays above other content */
-    margin-bottom: 0px;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color:black;
 }
 
 .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar-logo {
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .navbar-menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .navbar-item {
-    margin-right: 20px; /* Spacing between items */
+  margin-right: 20px;
 }
 
 .navbar-link {
-    color: white; /* Link color */
-    text-decoration: none; /* Remove underline */
-    font-size: 16px;
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
 }
 
 .navbar-link:hover {
-    color: #007BFF; /* Change color on hover */
+  color: #007BFF;
 }
 
 .active {
-    font-weight: bold; /* Style for active link */
-    border-bottom: 2px solid #007BFF; /* Underline for active link */
+  font-weight: bold;
+  border-bottom: 2px solid #007BFF;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .navbar-menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    display: none; /* Hide menu by default */
+  }
+
+  .navbar-menu.open {
+    display: flex; /* Show menu when open */
+  }
+
+  .navbar-item {
+    margin: 10px 0;
+  }
+
+  .navbar-link {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* Hamburger menu styles */
+  .hamburger {
+    display: block;
+    background: none;
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    /* Adjusting positioning for alignment */
+    margin-left: 3dvb;
+  }
 }

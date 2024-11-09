@@ -1,4 +1,3 @@
-// src/App.js
 import React from 'react';
 import './App.css';
 import Navbar from './Navbar';
@@ -7,6 +6,7 @@ import ServiceSection from './Sections/ServiceSection';
 import ContactSection from './Sections/ContactSection';
 import AboutSection from './Sections/AboutSection';
 import { Element } from 'react-scroll';
+import Footer from './Sections/Footer';
 
 function App() {
   return (
@@ -26,6 +26,7 @@ function App() {
           <ContactSection />
         </Element>
       </div>
+      <Footer /> {/* Added Footer component here */}
     </div>
   );
 }
