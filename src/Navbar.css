@@ -5,13 +5,14 @@
   top: 0;
   width: 100%;
   z-index: 1000;
-  background-color:black;
+  background-color: black;
 }
 
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-right: 40px;
 }
 
 .navbar-logo {
@@ -47,6 +48,11 @@
   border-bottom: 2px solid #007BFF;
 }
 
+/* Default state: hide hamburger icon */
+.hamburger {
+  display: none; /* Hide hamburger by default */
+}
+
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {
   .navbar-menu {
@@ -70,15 +76,14 @@
     padding: 10px;
   }
 
-  /* Hamburger menu styles */
+  /* Hamburger menu styles for small screens */
   .hamburger {
-    display: block;
+    display: block; /* Show hamburger on small screens */
     background: none;
     color: white;
     font-size: 1.5rem;
     border: none;
     cursor: pointer;
-    /* Adjusting positioning for alignment */
-    margin-left: 3dvb;
+    margin-left: 10px; /* Adjust for alignment */
   }
 }

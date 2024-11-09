@@ -15,11 +15,10 @@
 }
 
 .cta-button {
-  display: flex;
-  align-items: center;
+  display: block; /* Ensures the button takes up space as a block element */
+  margin: 0 auto;
   padding: 15px 30px;
   font-size: 1.2rem;
-  justify-content: center; /* Centers content horizontally */
   background-color: rgb(38, 210, 38);
   color: white;
   border: none;
@@ -27,7 +26,6 @@
   cursor: pointer;
   transition: background-color 0.3s;
   text-align: center;
-  margin-left: 500px;
 }
 
 .cta-button:hover {
