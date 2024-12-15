@@ -1,61 +1,53 @@
-// src/Sections/ServiceSection.js
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './Sections.css';
-import service1 from '../service1.png'; 
-import service2 from '../service2.jpg'; 
-import service3 from '../service3.jpg'; 
-import service4 from '../service4.jpg'; 
-import service5 from '../service5.jpg'; 
-import service6 from '../service6.jpg'; 
 
 const textVariants = {
-  initial: {
-    y: 200, // Start slightly below
-    opacity: 0,
-  },
-  animate: {
-    y: 0, // Move to default position
-    opacity: 1,
-    transition: {
-      duration: 1,
-      staggerChildren: 0.1,
-    },
-  },
+  initial: { y: 200, opacity: 0 },
+  animate: { y: 0, opacity: 1, transition: { duration: 1, staggerChildren: 0.1 } },
 };
 
 function ServiceSection() {
+  const navigate = useNavigate();
+
+  const services = [
+    { id: 1, title: 'Gum Health',  path: '/service1' },
+    { id: 2, title: 'Tooth Conservation',  path: '/service2' },
+    { id: 3, title: 'Dental and Jaw Surgeries', path: '/service3' },
+    { id: 4, title: 'Artificial Teeth',  path: '/service4' },
+    { id: 5, title: 'Cosmetic Dentistry', path: '/service5' },
+    { id: 6, title: 'Pedodontics',  path: '/service6' },
+    { id: 7, title: 'Full Mouth Rehabilitation',  path: '/service7' },
+  ];
+
   return (
+    <div className='frame1'>
     <section id="service" className="section service-section">
-      <motion.h1 
-        className='sc'
+   
+      <h1
+        className="sc"
         initial="initial"
         whileInView="animate"
         variants={textVariants}
       >
         Our Services
-      </motion.h1>
-      <div className="container">
-        {[{src: service1, label: 'Long Format Vehicles'},
-          {src: service2, label: 'Mini Type Vehicle'},
-          {src: service3, label: 'Long Distance vehicle'},
-          {src: service4, label: 'Containered Vehicle'},
-          {src: service5, label: 'Eicher type Vehicle'},
-          {src: service6, label: 'Compact Vehicles'}
-        ].map((service, index) => (
-          <motion.div 
-            className='one' 
-            key={index}
-            initial="initial"
-            whileInView="animate"
-            variants={textVariants}
+      </h1>
+
+      <motion.div initial="initial" whileInView="animate" variants={textVariants} className="box-container">
+        {services.map((service) => (
+          <div
+            key={service.id}
+            className="one"
+            onClick={() => navigate(service.path)} // Navigate to the service's page
           >
-            <img src={service.src} alt={service.label} />
-            <p>{service.label}</p>
-          </motion.div>
+            <span className="service-title">{service.title}</span>
+            <span className="service-more">{service.more}</span>
+          </div>
         ))}
-      </div>
-    </section>
+      </motion.div>
+     
+    </section> </div>
   );
 }
 

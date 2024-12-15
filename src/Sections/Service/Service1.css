@@ -1,0 +1,38 @@
+.service-page {
+    margin-top: 4cqmin;
+    margin-left: 20px;
+    padding: 20px; /* Optional padding for better spacing */
+  
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      margin-top: 100px; /* Adjust margin for smaller screens */
+      margin-left: 20px; /* Reduce left margin */
+      padding: 10px; /* Adjust padding */
+    }
+  
+    @media (max-width: 480px) {
+      margin-top: 80px; /* Further reduce top margin for very small screens */
+      margin-left: 10px; /* Minimal left margin */
+      padding: 5px; /* Minimal padding */
+    }
+  }
+  .service-page img {
+    display: block; /* Removes any extra space below the image */
+    margin: 0 auto; /* Centers the image horizontally */
+    max-width: 100%; /* Ensures the image is responsive */
+  }
+  .service-title {
+    text-align: center;
+  
+    /* Responsive styles */
+    font-size: 2rem; /* Default size for larger screens */
+    @media (max-width: 768px) {
+      font-size: 1.5rem; /* Reduce font size for tablets and smaller screens */
+    }
+  
+    @media (max-width: 480px) {
+      font-size: 1.2rem; /* Further reduce font size for very small screens */
+    }
+  }
+  
+  

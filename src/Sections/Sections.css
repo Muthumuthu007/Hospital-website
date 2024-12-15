@@ -1,165 +1,310 @@
+/* General Styling */
 .home-section {
-  margin-top: 0px;
-  color: white;
-  margin-bottom: 0px;
-}
-
-.home-section h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.home-section p {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-}
-
-.cta-button {
-  display: block; /* Ensures the button takes up space as a block element */
-  margin: 0 auto;
-  padding: 15px 30px;
-  font-size: 1.2rem;
-  background-color: rgb(38, 210, 38);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-bottom: 0;
   text-align: center;
 }
 
-.cta-button:hover {
-  background-color: rgb(25, 80, 25);
+/* Wrapper for content with spacing */
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
 }
 
-.whatsapp-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-
-
+/* Keyframe animation for hero section */
+@keyframes pro2__animate {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
 }
 
-.about-section {
-  color: white;
+/* Hero section styling */
+.hero {
+  margin-top: 0;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  background-color: grey;
+  object-fit: cover;
+  overflow: hidden;
+  animation: pro2__animate 5s infinite ease-in-out;
+  width: 100%;
+  max-width: 400px;
 }
 
-.service-section {
-  margin-top: 0px;
-  color: white;
+/* Wrapper for text content */
+.text-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+}
+
+.frame {
+  width: 90%;
+  max-width: 1250px;
+  height: auto;
+  background-color: rgba(255, 252, 252, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Styling for large headings */
+.text-wrapper h1 {
+  font-size: 3rem;
   margin-bottom: 10px;
 }
 
-.contact {
+/* Paragraph text */
+.text-wrapper p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Call-to-action button */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: rgb(138, 134, 134);
   color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.email {
-  color: black;
+.cta-button:hover {
+  background-color: rgb(56, 46, 46);
 }
 
-.ab, .sc, .co {
-  color: yellow;
+/* Service Section */
+.service-section {
+  padding: 50px 20px;
+  text-align: center;
 }
 
-.container {
+.frame1 {
+  width: 90%;
+  max-width: 1250px;
+  height: auto;
+  background-color: rgba(255, 252, 252, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 20px auto;
+}
+
+.sc {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Container for Service Boxes */
+.service-section .box-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
 }
 
+.about-text {
+  line-height: 1.5;
+}
+
+/* Individual Service Box Style */
 .one {
-  margin: 10px;
-  background-color: #030303;
-  border: 2px solid black;
-  padding: 20px;
-  border-radius: 30px;
-  display: inline-block;
-  box-sizing: border-box;
+  width: 210px;
   height: 300px;
-  width: 250px;
-  font-size: x-large;
-  font-weight: bolder;
-  flex-basis: 30%;
-  text-align: center;
-}
-
-.one img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.about, .val {
-  margin: 10px;
-  background-color: #4f4d4d;
-  border: 2px solid black;
-  padding: 20px;
-  border-radius: 30px;
- 
-  box-sizing: border-box;
-  height: 350px;
-  width: 700px;
-  font-size: x-large;
-  font-weight: bolder;
-  flex-basis: 30%;
-  text-align: center;
-  display: block;
+  background-color: #EFB9B9;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  margin-left: 350px;
+  text-align: center;
 }
 
-.about:hover {
-  background-color: #282727;
+.one:hover {
+  transform: translateY(-10px);
 }
 
-.val:hover, .va:hover {
-  background-color: #282727;
+/* Responsive adjustments for service section */
+@media (max-width: 1200px) {
+  .one {
+    width: calc((100% / 3) - 20px);
+  }
 }
 
-/* Responsive styles for Sections.css */
 @media (max-width: 768px) {
-  .home-section h1 {
-    font-size: 2rem;
-  }
-
-  .home-section p {
-    font-size: 1rem;
-  }
-
-  .cta-button {
-    width: 100%;
-    margin: 0;
-    text-align: center;
-  }
-
-  .about-section, .service-section, .contact {
-    padding: 10px;
-    text-align: center;
-  }
-
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .one, .about, .val, .va {
-    width: 90%;
-    height: auto;
-    margin: 10px;
-    padding: 15px;
+  .one {
+    width: calc((100% / 2) - 20px);
   }
 }
 
 @media (max-width: 576px) {
-  .one, .about, .val, .va {
+  .one {
     width: 100%;
-    padding: 10px;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero {
+    width: 100%;
+    margin-left: -20px;
+  }
+
+  .text-wrapper h1 {
+    font-size: 2rem;
+  }
+
+  .text-wrapper p {
+    font-size: 1rem;
   }
 
   .cta-button {
     font-size: 1rem;
     padding: 10px;
+  }
+
+  .service-section {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    max-width: 100%;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .service-section {
+    margin-top: 50px;
+  }
+}
+
+/* About Section */
+.section {
+  width: 90%;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.about-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.about-text {
+  text-align: justify;
+}
+
+.ab {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .about-content-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image img {
+    max-width: 100%;
+  }
+}
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Prevents content overflow issues */
+}
+
+/* Static Text Section Styling */
+.static-text-below {
+  padding: 10px;
+  text-align: center;
+}
+
+.static-text-below p {
+  text-align: justify;
+  margin: 0 auto; /* Center aligns content */
+  max-width: 90%; /* Prevents extra width */
+}
+
+/* Video Section Styling */
+.video-below {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.clinic-video {
+  width: 100%; /* Full width of its container */
+  max-width: 800px; /* Limits video size on larger screens */
+  height: auto; /* Maintains aspect ratio */
+}
+
+/* Ensure Responsiveness for Small Screens */
+@media (max-width: 600px) {
+  .static-text-below p {
+    margin-left: 0; /* Removes excessive left margin */
+    text-align: center; /* Centers text on smaller screens */
+    max-width: 95%;
+  }
+
+  .clinic-video {
+    width: 95%; /* Makes video slightly smaller on tiny screens */
   }
 }

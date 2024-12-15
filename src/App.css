@@ -5,11 +5,15 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 50px;
-  background-color: black;
+  background-image: url('/Users/muthuk/Documents/Dental/hospital/src/Image/backdental.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .app-background {
-  background-color: black;
+
   background-size: cover;
   background-position: center;
   height: 100%;
@@ -20,7 +24,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 0px;
+  padding: 0 20px;
   font-size: larger;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: bolder;
@@ -44,8 +48,6 @@ body {
 .App {
   background-size: cover;
   background-position: center;
-  height: 500px;
-  background-size: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -54,9 +56,11 @@ body {
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   text-align: center;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: large;
   font-weight: bold;
   color: black;
@@ -71,7 +75,51 @@ body {
   text-align: center;
 }
 
-/* Responsive adjustments for App.css */
+/* Splash screen styling */
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff; /* White background */
+  z-index: 9999;
+}
+
+/* Splash logo styling */
+.splash-logo {
+  width: 150px; /* Adjust size */
+  height: auto;
+  animation: fadeInOut 3s ease-in-out; /* Fade effect */
+}
+
+/* Fade in and out animation */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Main content styling */
+.content {
+  padding: 20px;
+}
+
+/* Responsive adjustments */
+
+/* For small screens (max-width: 768px) */
 @media (max-width: 768px) {
   .head {
     flex-direction: column;
@@ -90,13 +138,61 @@ body {
     width: 100%;
   }
 
-  .app-background {
-    background-size: cover;
-    background-position: center;
-  }
-
   .content, .contact, .items {
     text-align: center;
     padding: 20px;
+  }
+
+  .splash-logo {
+    width: 100px;
+  }
+}
+
+/* For ultra-wide screens (min-width: 1440px) */
+@media (min-width: 1440px) {
+  .head {
+    padding: 0 40px;
+    font-size: 1.5rem;
+  }
+
+  .nav_link {
+    padding: 15px 20px;
+  }
+
+  .content {
+    font-size: 1.2rem;
+  }
+
+  .splash-logo {
+    width: 200px;
+  }
+}
+
+/* For very narrow screens (max-width: 480px) */
+@media (max-width: 480px) {
+  body {
+    margin-top: 30px;
+  }
+
+  .head {
+    font-size: medium;
+  }
+
+  .nav_list {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .nav_link {
+    font-size: small;
+    padding: 8px 10px;
+  }
+
+  .content {
+    font-size: medium;
+  }
+
+  .splash-logo {
+    width: 80px;
   }
 }

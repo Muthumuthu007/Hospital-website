@@ -1,26 +1,59 @@
 import React from 'react';
-import './Footer.css';
-import { motion } from 'framer-motion'; // Import framer-motion for animation
+import { Facebook, Linkedin, MapPin } from 'lucide-react';
+import styles from './Footer.css';
 
-function Footer() {
-  // Define animation variants
-  const footerVariants = {
-    initial: { opacity: 0, y: 50 },  // Start from below and invisible
-    animate: { opacity: 1, y: 0, transition: { duration: 1 } },  // End in original position
-  };
-
+const Footer = () => {
   return (
-    <motion.footer
-      className="footer"
-      initial="initial"
-      whileInView="animate"
-      variants={footerVariants}  // Apply animation variants
-      viewport={{ once: true, amount: 0.2 }} // Trigger animation when the footer is in view
-    >
-      <p>Proprietor: Selvarani R&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GST Registration Number: 33MBEPS7815Q1ZO</p>
-      <p><b>Location:</b> 10/11, Meenakchi Street, Laxmi Amman Nagar, Chennai, Tamil Nadu, 600118</p>
-    </motion.footer>
+    <div className='foot'>
+    <footer className={styles.footer}>
+      <div className={styles.contain}>
+        <div className={styles.conten}>
+          <div className={styles.clinicInfo}>
+            <h3 className={styles.clinicName}>
+              Dr Sreekanth's Dental Clinic
+            </h3>
+            <p className={styles.clinicTagline}>
+              Providing Quality Dental Care
+            </p>
+          </div>
+          
+          <div className={styles.socialLinks}>
+            <a
+              href="https://www.linkedin.com/in/dr-sreekanth-krishnamurthy-9a447033"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${styles.socialLink} ${styles.linkedin}`}
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={24} />
+            </a>
+            <a
+              href="https://www.facebook.com/DrSKSDentalClinic"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${styles.socialLink} ${styles.facebook}`}
+              aria-label="Facebook"
+            >
+              <Facebook size={24} />
+            </a>
+            <a
+              href="https://maps.app.goo.gl/PzebSirijcnS4dsc7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${styles.socialLink} ${styles.maps}`}
+              aria-label="Google Maps"
+            >
+              <MapPin size={24} />
+            </a>
+          </div>
+        </div>
+        
+        <div className={styles.copyright}>
+          <p>&copy; {new Date().getFullYear()} Dr Sreekanth's Dental Clinic. All rights reserved.</p>
+        </div>
+      </div>
+    </footer></div>
   );
-}
+};
 
 export default Footer;
