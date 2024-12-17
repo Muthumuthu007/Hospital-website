@@ -6,11 +6,16 @@ import video from '../Image/video1.mp4';
 function AboutSection2() {
     return (
         <>
-            {/* New Static Text Section Above Video */}
+           <div className='frame2'>
+           <section id="about" className="section about-section">
             <div className="static-text-below">
                 <h2>New to Our Clinic?</h2>
-                <p style={{ textAlign: 'justify', marginLeft: '90px' }}>
-                    Relax and let us guide you through a seamless journey to better oral health. From your first consultation to personalized treatment plans, the doctor ensures every detail is tailored just for you. Step in, and discover a dental experience designed to make you smile brighter!
+                <p style={{ textAlign: 'center'}}>
+                    Relax and let us guide you through a seamless journey to better oral health. 
+                    From your first consultation to personalized treatment plans, 
+                    the doctor ensures every detail is tailored just for you. Step in,
+                     and discover a dental experience designed to make you smile brighter!.
+                     
                 </p>
             </div>
 
@@ -21,6 +26,8 @@ function AboutSection2() {
                     Your browser does not support the video tag.
                 </video>
             </div>
+            </section>
+        </div>
         </>
     );
 }

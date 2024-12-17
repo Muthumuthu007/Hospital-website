@@ -1,0 +1,71 @@
+
+.footer {
+  width: 100%; /* Ensure it takes the full width of the screen */
+  background-color: #1f2937;
+  color: white;
+  padding: 2rem 0;
+  margin-top:30px;
+  position: relative; /* Allows it to stay within the document flow */
+  left: 0; /* Ensures it starts from the left edge */
+  bottom: 0; /* Optional: If it's a sticky footer */
+}
+
+.container {
+  max-width: 100%; /* Keeps content within a readable width */
+  margin: 0 auto; /* Centers the content */
+  padding: 0 1rem; /* Adds padding on smaller screens */
+}
+
+.contentt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clinicInfo {
+  margin-bottom: 1.5rem;
+}
+
+.clinicName {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+}
+
+.clinicTagline {
+  margin-top: 0.5rem;
+  color: #d1d5db;
+  font-size: medium;
+  font-weight: 400;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.socialLink {
+  transition: color 0.3s ease;
+  color: aliceblue;
+}
+
+.socialLink.linkedin:hover {
+  color: #0077b5;
+}
+
+.socialLink.facebook:hover {
+  color: #1877f2;
+}
+
+.socialLink.maps:hover {
+  color: #ea4335;
+}
+
+.copyright {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #374151;
+  text-align: center;
+  color: #9ca3af;
+}

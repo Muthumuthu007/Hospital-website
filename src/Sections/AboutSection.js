@@ -1,12 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import './Sections.css';
-import Clinic from '../Image/Clinic.jpg'; 
-import Clinic1 from '../Image/Clinic1.jpg'; 
-import Clinic2 from '../Image/Clinic2.jpg'; 
-import Clinic3 from '../Image/Clinic4.jpg'; 
-import Clinic4 from '../Image/Clinic5.jpg'; 
-import video from '../Image/video1.mp4'; 
+import React, { useState, useEffect } from 'react';     
+import { motion, AnimatePresence } from 'framer-motion';      
+import './Sections.css';    
+import Clinic from '../Image/Clinic.jpg';    
+import Clinic1 from '../Image/Clinic1.jpg';   
+import Clinic2 from '../Image/Clinic2.jpg';  
+import Clinic3 from '../Image/Clinic4.jpg';   
+import Clinic4 from '../Image/Clinic5.jpg';  
+import video from '../Image/video1.mp4';
+
+
+
+
 
 function AboutSection() {
   const slides = [
@@ -31,6 +35,8 @@ function AboutSection() {
       text: `At Dr. Sreekanth's Dental Clinic, we bring over 30 years of expertise in providing painless and premium dental experiences. With a personalized approach, Dr. Sreekanth ensures every patient receives the best care, offering tailored solutions without intermediaries. Beyond the clinic, Dr. Sreekanth is a dedicated member of the Lions Club, actively helping underprivileged patients access world-class treatment, embodying our commitment to compassionate and quality dental care for all.`,
     },
   ];
+
+
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -79,9 +85,7 @@ function AboutSection() {
               <img src={slides[currentSlide].image} alt={`Slide ${currentSlide}`} />
             </motion.div>
           </AnimatePresence>
-        </div>
-
-        
+        </div>      
       </section>
     </div>
   );

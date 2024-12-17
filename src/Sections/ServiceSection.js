@@ -3,10 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './Sections.css';
 
+
 const textVariants = {
   initial: { y: 200, opacity: 0 },
   animate: { y: 0, opacity: 1, transition: { duration: 1, staggerChildren: 0.1 } },
 };
+
+
 
 function ServiceSection() {
   const navigate = useNavigate();
@@ -50,5 +53,6 @@ function ServiceSection() {
     </section> </div>
   );
 }
+
 
 export default ServiceSection;

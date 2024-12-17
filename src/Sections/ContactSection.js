@@ -25,6 +25,7 @@ justify-content: space-between;
 align-items: center;
 flex-direction: column;
 width: 100%;
+font-weight: 400;
 max-width: 1350px;
 padding: 0px 0px 80px 0px;
 gap: 12px;

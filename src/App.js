@@ -70,7 +70,10 @@ function App() {
                 <Element name="rateus">
                   <Rateus />
                 </Element>
-                <Footer />
+                <Element name="Footer">
+                  <Footer />
+                </Element>
+                
               </div>
             }
           />
