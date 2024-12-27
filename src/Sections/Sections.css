@@ -1,3 +1,8 @@
+/* Sections.css */
+
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+/* Your existing styles */
 
 .home-section {
   display: flex;
@@ -90,9 +95,17 @@
   font-weight: lighter;
 }
 
+/* Buttons Alignment */
+.button-wrapper {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Call-to-action button */
 .cta-button {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 15px 30px;
@@ -107,8 +120,27 @@
 
 .cta-button:hover {
   background-color: rgb(56, 46, 46);
-  cursor:pointer;
-  
+  cursor: pointer;
+}
+
+
+.cta-button i {
+  font-size: 1.2rem; /* Adjust icon size */
+  margin-right: 10px; /* Consistent spacing for all icons */
+}
+
+
+.fas.fa-phone-alt {
+  transform: rotate(90deg); /* Rotates the icon 90 degrees to face right */
+  margin-left: 10px; /* Optional spacing between icon and text */
+}
+
+
+@media (max-width: 576px) {
+  .button-wrapper {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Adjust gap for smaller screens */
+  }
 }
 
 /* Service Section */
@@ -331,3 +363,4 @@ background: linear-gradient(90deg, rgba(208,155,58,1) 0%, rgba(218,211,197,1) 35
     width: 95%; /* Makes video slightly smaller on tiny screens */
   }
 }
+

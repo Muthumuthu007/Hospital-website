@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Linkedin, MapPin } from 'lucide-react';
+import { Facebook, Linkedin, MapPin, Phone } from 'lucide-react';
 import styles from './Footer.module.css';
 
 const Footer = () => {
@@ -39,6 +39,15 @@ const Footer = () => {
               aria-label="Google Maps"
             >
               <MapPin size={24} />
+            </a>
+            <a
+              href="tel:9381993739"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${styles.socialLink} ${styles.phone}`}
+              aria-label="Call"
+            >
+              <Phone size={24} />
             </a>
           </div>
         </div>
